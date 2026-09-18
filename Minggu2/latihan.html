@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan 1</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td><label for="name">Nama</label></td>
+            <td><input type="text" name="nama" id="nama" value="Romi"></td>
+        </tr>
+        <tr>
+            <td><label for="email">Email</label></td>
+            <td><input type="email" name="email" id="email" value="romi@gmail.com"></td>
+        </tr>
+        <tr>
+            <td><label for="name">Username</label></td>
+            <td><input type="text" name="nama" id="nama" pattern="[a-z0]" value="romi"></td>
+        </tr>
+        <tr>
+            <td><label for="password">Password</label></td>
+            <td><input type="password" name="password" id="password" value="1234"></td>
+        </tr>
+        <tr>
+            <td><label for="jeniskelamin">Jenis Kelamin</label></td>
+            <td><select name="jeniskelamin" id="jeniskelamin">
+                <option value="Laki-laki" selected>Laki-laki</option>
+            </select></td>
+        </tr>
+        <tr>
+            <td><label for="alamat">Alamat</label></td>
+            <td><textarea name="alamat" id="alamat" cols="30" rows="10">Bogor</textarea></td>
+        </tr>
+    </table>  
+    <button type="submit">Simpan</button>
+</body>
+</html>
