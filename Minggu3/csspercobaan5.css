@@ -1,9 +1,5 @@
 body {
     background: blue;
-    border-style: double;
-    border-width: 5px;
-    border-color: white;
-    border-radius: 15px;
 }
 h2 {
     font-family: "Comic Sans MS";
@@ -17,10 +13,7 @@ table {
     margin: 20px auto;
     padding: 5px;
     width: 68%;
-    border-style: dotted;
-    border-width: 5px;
-    border-color: white;
-    border-radius: 15px;
+    border-width: 0px;
 }
 .kolom1 {
     font-weight: bold;
@@ -48,38 +41,4 @@ table {
 #txtalamat {
     width: 346px;
     height: 42px;
-}
-
-#btnKirim {
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    background-color: green;
-    padding: 10px 20px;
-    border-radius: 15px;
-}
-
-#btnKirim:hover {
-    color: black;
-    background-color: blue;
-}
-#btnKirim:active {
-    background-color: yellow;
-}
-
-#btnCancel {
-    color: rgb(255, 255, 255);
-    text-align: center;
-    text-decoration: none;
-    background-color: red;
-    padding: 10px 20px;
-    border-radius: 15px;
-}
-
-#btnCancel:hover {
-    color: black;
-    background-color: blue;
-}
-#btnCancel:active {
-    background-color: yellow;
 }
