@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas 2</title>
+</head>
+<body>
+    <h3>Kalkulator Sederhana</h3>
+    <input type="number" id="angka1" placeholder="Angka pertama">
+    
+    <select id="operator">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">x</option>
+        <option value="/">/</option>
+    </select>
+    
+    <input type="number" id="angka2" placeholder="Angka kedua">
+    <button onclick="hitung()">Hitung</button>
+    
+    <script>
+        function hitung() {
+            const angka1 = parseFloat(document.getElementById("angka1").value);
+            const angka2 = parseFloat(document.getElementById("angka2").value);
+            const operator = document.getElementById("operator").value;
+            let hasil = 0;
+
+            if (isNaN(angka1) || isNaN(angka2)) {
+                alert("Error: Ada angka yang tidak valid!");
+                return;
+            }
+            if (operator == "+") {
+                hasil = angka1 + angka2;
+            } 
+            else if (operator == "-") {
+                hasil = angka1 - angka2;
+            } 
+            else if (operator == "*") {
+                hasil = angka1 * angka2;
+            } 
+            else if (operator == "/") {
+                if (angka2 == 0) {
+                    alert("Error: Tidak bisa melakukan pembagian dengan nol!");
+                    return;
+                }
+                hasil = angka1 / angka2;
+            } 
+            else {
+                alert("Operator tidak valid!");
+                return;
+            }
+            alert("Hasil: " + hasil);
+        }
+    </script>
+</body>
+</html>

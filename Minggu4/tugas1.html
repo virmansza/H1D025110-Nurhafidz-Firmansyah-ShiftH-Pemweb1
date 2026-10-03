@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas 2</title>
+</head>
+<body>
+    <label for="inputNilai">Masukkan Nilai (0-100):</label>
+    <input type="number" id="inputNilai">
+    <input type="submit" onclick="cekGrade()">
+    
+    <script>
+        function cekGrade() {
+            const nilai = Number(document.getElementById("inputNilai").value);
+            if (document.getElementById("inputNilai").value === "") {
+               alert("Harap masukkan nilai terlebih dahulu!");
+               return;
+            }
+
+            if (nilai >= 81 && nilai <= 100) {
+                alert("Grade: A");
+            } else if (nilai >= 61 && nilai <= 80) {
+                alert("Grade: B");
+            } else if (nilai >= 41 && nilai <= 60) {
+                alert("Grade: C");
+            } else if (nilai >= 21 && nilai <= 40) {
+                alert("Grade: D");
+            } else if (nilai >= 0 && nilai <= 20) {
+                alert("Grade: E");
+            } else {
+                alert("Nilai di luar rentang! Masukkan angka 0-100.");
+            }
+        }
+    </script>
+</body>
+</html>

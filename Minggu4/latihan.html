@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan 1</title>
+</head>
+<body>
+    <form action="POST" name="form" onsubmit="return cek()" >
+        <table>
+            <tr>
+                <td><label for="name">Nama</label></td>
+                <td>:</td>
+                <td><input type="text" name="name" id="name"></td>
+            </tr>
+            <tr>
+                <td><label for="email">Email</label></td>
+                <td>:</td>
+                <td><input type="email" name="email" id="email"></td>
+            </tr>
+            <tr>
+                <td><label for="komentar">Komentar</label></td>
+                <td>:</td>
+                <td><textarea name="komentar" id="komentar" cols="40" rows="10"></textarea></td>
+            </tr>
+        </table>
+        <button type="submit">Simpan</button>
+
+        <script>
+        function cek(){
+
+            const name = document.getElementById("name");
+            const email = document.getElementById("email");
+            const komentar = document.getElementById("komentar")
+            if (name.value == "" || email.value == "" || komentar.value == "") {
+                alert("Isi semua kolom form!");
+                form.focus();
+                return false;
+            }
+                const hanyahuruf = /^[a-zA-Z\s]+$/;
+            if (!hanyahuruf.test(name.value)) {
+                alert("Kolom Nama hanya boleh berisi huruf dan spasi! Tidak boleh ada angka atau simbol.");
+                name.focus();
+                return false;
+            }
+                alert("Pengisian form sukses!");
+                return true;
+
+        }
+        </script>
+    </form>
+    
+    
+</body>
+</html>
