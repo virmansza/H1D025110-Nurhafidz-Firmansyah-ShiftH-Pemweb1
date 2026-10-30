@@ -1,0 +1,41 @@
+<?php
+if(isset($_POST['Submit'])) {
+    include("koneksi.php");
+    $nama = $_POST['nama'];
+    $nomor_hp = $_POST['nomor_hp'];
+
+    $result = mysqli_query($koneksi, "INSERT INTO kurir(nama, nomor_hp) VALUES ('$nama','$nomor_hp')");
+
+    header("Location:kurir.php");
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Kurir</title>
+</head>
+<body>
+    <h1>Tambah Data Kurir</h1>
+    <a href="pembeli.php">Batal</a>
+    <br><br>
+    <form action="createKurir.php" method="POST" >
+        <table>
+            <tr>
+                <td>Nama Kurir</td>
+                <td><input type="text" name="nama"></td>
+            </tr>
+            <tr>
+                <td>Nomor HP</td>
+                <td><input type="text" name="nomor_hp"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" name="Submit" value="Tambah"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
